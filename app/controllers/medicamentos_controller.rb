@@ -26,7 +26,7 @@ class MedicamentosController < ApplicationController
 
     respond_to do |format|
       if @medicamento.save
-        format.html { redirect_to @medicamento, notice: "Medicamento was successfully created." }
+        format.html { redirect_to @medicamento, notice: "" }
         format.json { render :show, status: :created, location: @medicamento }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +39,7 @@ class MedicamentosController < ApplicationController
   def update
     respond_to do |format|
       if @medicamento.update(medicamento_params)
-        format.html { redirect_to @medicamento, notice: "Medicamento was successfully updated." }
+        format.html { redirect_to @medicamento, notice: "" }
         format.json { render :show, status: :ok, location: @medicamento }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -53,7 +53,7 @@ class MedicamentosController < ApplicationController
     @medicamento.destroy!
 
     respond_to do |format|
-      format.html { redirect_to medicamentos_path, status: :see_other, notice: "Medicamento was successfully destroyed." }
+      format.html { redirect_to medicamentos_path, status: :see_other, notice: "" }
       format.json { head :no_content }
     end
   end

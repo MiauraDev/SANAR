@@ -26,7 +26,7 @@ class CitaController < ApplicationController
 
     respond_to do |format|
       if @citum.save
-        format.html { redirect_to @citum, notice: "Citum was successfully created." }
+        format.html { redirect_to @citum, notice: "" }
         format.json { render :show, status: :created, location: @citum }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +39,7 @@ class CitaController < ApplicationController
   def update
     respond_to do |format|
       if @citum.update(citum_params)
-        format.html { redirect_to @citum, notice: "Citum was successfully updated." }
+        format.html { redirect_to @citum, notice: "" }
         format.json { render :show, status: :ok, location: @citum }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -53,7 +53,7 @@ class CitaController < ApplicationController
     @citum.destroy!
 
     respond_to do |format|
-      format.html { redirect_to cita_path, status: :see_other, notice: "Citum was successfully destroyed." }
+      format.html { redirect_to cita_path, status: :see_other, notice: "" }
       format.json { head :no_content }
     end
   end

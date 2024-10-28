@@ -26,7 +26,7 @@ class DiagnosticosController < ApplicationController
 
     respond_to do |format|
       if @diagnostico.save
-        format.html { redirect_to @diagnostico, notice: "Diagnostico was successfully created." }
+        format.html { redirect_to @diagnostico, notice: "" }
         format.json { render :show, status: :created, location: @diagnostico }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +39,7 @@ class DiagnosticosController < ApplicationController
   def update
     respond_to do |format|
       if @diagnostico.update(diagnostico_params)
-        format.html { redirect_to @diagnostico, notice: "Diagnostico was successfully updated." }
+        format.html { redirect_to @diagnostico, notice: "" }
         format.json { render :show, status: :ok, location: @diagnostico }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -53,7 +53,7 @@ class DiagnosticosController < ApplicationController
     @diagnostico.destroy!
 
     respond_to do |format|
-      format.html { redirect_to diagnosticos_path, status: :see_other, notice: "Diagnostico was successfully destroyed." }
+      format.html { redirect_to diagnosticos_path, status: :see_other, notice: "" }
       format.json { head :no_content }
     end
   end
