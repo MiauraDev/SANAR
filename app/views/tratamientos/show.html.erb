@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+
+<div class="show">
+<div class="opcion-show">
+<div>
+  <%= link_to "❮ Volver", tratamientos_path, class: "link-new" %>
+ </div> 
+<div class="opcion-show">
+  <%= link_to "Editar", edit_tratamiento_path(@tratamiento) , class: "link-edit"%> 
+  <%= button_to "Eliminar", @tratamiento, method: :delete, class: "button-destroy"%>
+</div>
+</div>
+
+<div class="container-content">
+  <div class="content-content">
+<%= render @tratamiento %>
+</div>
+</div>
+</div>

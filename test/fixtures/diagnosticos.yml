@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  descripcion: MyText
+  fecha: 2024-10-27 13:27:09
+  paciente: one
+  medico: one
+  gravedad: MyString
+  recomendaciones: MyText
+  tipo_diagnostico: MyString
+
+two:
+  descripcion: MyText
+  fecha: 2024-10-27 13:27:09
+  paciente: two
+  medico: two
+  gravedad: MyString
+  recomendaciones: MyText
+  tipo_diagnostico: MyString

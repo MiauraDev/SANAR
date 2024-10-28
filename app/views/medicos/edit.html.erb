@@ -1,0 +1,12 @@
+<% content_for :title, "Editar médico" %>
+
+<h1>Editar médico</h1>
+
+<div class="opcion-edit">
+    <%= link_to "❮ Volver", medicos_path, class: "link-new" %>
+  <%= link_to "Ver médico", @medico, class: "link-new right" %> 
+</div>
+
+<div class="container-content">
+  <%= render "form", medico: @medico %>
+</div>

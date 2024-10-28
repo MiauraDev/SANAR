@@ -1,0 +1,35 @@
+<!-- app/views/sessions/new.html.erb -->
+
+<div class="container-login">
+  <div class="content-login">
+    <div class="container-left">
+      <%= image_tag "/images/TI.svg", alt: "TI", Class: "img-login" %>
+    </div>
+
+    <div class="form-login container-right">
+      <h1>SANAR ✚</h1>
+
+      <%= form_with(url: login_path, local: true) do |form| %>
+        <%= form.fields_for :session do |session_fields| %>
+          <div>
+            <%= session_fields.label :username, "Usuario" %>
+            <%= session_fields.text_field :username %>
+          </div>
+          <div>
+            <%= session_fields.label :password, "Contraseña" %>
+            <%= session_fields.password_field :password %>
+          </div>
+          <div>
+            <%= session_fields.submit "Iniciar sesión" %>
+          </div>
+        <% end %>
+        
+        <% if flash[:alert] %>
+          <div class="alert alert-danger">
+            <%= flash[:alert] %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

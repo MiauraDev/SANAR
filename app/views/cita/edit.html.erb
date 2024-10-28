@@ -1,0 +1,13 @@
+<% content_for :title, "Editar cita" %>
+
+<h1>Editar cita</h1>
+
+
+<div class="opcion-edit">
+    <%= link_to "❮ Volver", cita_path, class: "link-new" %>
+  <%= link_to "Ver cita", @citum , class: "link-new right"%> 
+</div>
+
+<div class="container-content">
+<%= render "form", citum: @citum %>
+</div>

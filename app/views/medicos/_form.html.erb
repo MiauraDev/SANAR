@@ -1,0 +1,52 @@
+<%= form_with(model: medico, class: "form-container") do |form| %>
+  <% if medico.errors.any? %>
+    <div class="error-form">
+      <h2><%= pluralize(medico.errors.count, "error") %> prohibited this medico from being saved:</h2>
+
+      <ul>
+        <% medico.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nombre, class: "label-form" %>
+    <%= form.text_field :nombre, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.label :apellido, class: "label-form" %>
+    <%= form.text_field :apellido, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.label :especialidad, class: "label-form" %>
+    <%= form.text_field :especialidad, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.label :telefono, class: "label-form" %>
+    <%= form.text_field :telefono , class: "input-form"%>
+  </div>
+
+  <div>
+    <%= form.label :email, class: "label-form" %>
+    <%= form.text_field :email , class: "input-form"%>
+  </div>
+
+  <div>
+    <%= form.label :licencia, class: "label-form" %>
+    <%= form.text_field :licencia, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.label :años_experiencia, class: "label-form" %>
+    <%= form.number_field :años_experiencia, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.submit "Guardar" , class: "submit-form" %>
+  </div>
+<% end %>

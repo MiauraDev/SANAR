@@ -1,0 +1,22 @@
+<p><%= notice %></p>
+
+<% content_for :title, "Médicos" %>
+
+<h1>Médicos</h1>
+
+<div class="opcion-edit">
+ <%= link_to "❮ Volver", root_path, class: "link-new" %>
+ <%= link_to "✚ Nuevo médico", new_medico_path, class: "link-new right" %>
+</div>
+
+<div class="container-content">
+  <% @medicos.each_with_index do |medico, index| %>
+  <div class="content-content">
+    <p class="numero"><%= index + 1 %></p>
+    <%= render medico %>
+    <p>
+      <%= link_to "Ver médico", medico,class: "link-show" %>
+    </p>
+  </div>
+  <% end %>
+</div>

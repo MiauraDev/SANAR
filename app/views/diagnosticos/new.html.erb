@@ -1,0 +1,9 @@
+<% content_for :title, "Nuevo diagnóstico" %>
+
+<h1>Nuevo diagnóstico</h1>
+
+  <%= link_to "❮ Volver", diagnosticos_path , class: "link-new"%>
+
+<div class="container-content">
+<%= render "form", diagnostico: @diagnostico %>
+</div>

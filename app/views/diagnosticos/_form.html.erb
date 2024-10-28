@@ -1,0 +1,52 @@
+<%= form_with(model: diagnostico, class: "form-container") do |form| %>
+  <% if diagnostico.errors.any? %>
+    <div class="error-form">
+      <h2><%= pluralize(diagnostico.errors.count, "error") %> prohibited this diagnostico from being saved:</h2>
+
+      <ul>
+        <% diagnostico.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :descripcion, class: "label-form" %>
+    <%= form.text_area :descripcion , class: "input-form"%>
+  </div>
+
+  <div>
+    <%= form.label :fecha, class: "label-form" %>
+    <%= form.datetime_field :fecha, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.label :paciente_id, class: "label-form" %>
+    <%= form.text_field :paciente_id, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.label :medico_id, class: "label-form" %>
+    <%= form.text_field :medico_id, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.label :gravedad, class: "label-form" %>
+    <%= form.text_field :gravedad, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.label :recomendaciones, class: "label-form" %>
+    <%= form.text_area :recomendaciones , class: "input-form"%>
+  </div>
+
+  <div>
+    <%= form.label :tipo_diagnostico, class: "label-form" %>
+    <%= form.text_field :tipo_diagnostico, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.submit "Guardar" ,class: "submit-form"%>
+  </div>
+<% end %>

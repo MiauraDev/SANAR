@@ -1,0 +1,23 @@
+<p><%= notice %></p>
+
+<% content_for :title, "Tratamientos" %>
+
+<h1>Tratamientos</h1>
+
+<div class="opcion-edit">
+ <%= link_to "❮ Volver", root_path, class: "link-new" %>
+  <%= link_to "✚ Nuevo tratamiento", new_tratamiento_path, class: "link-new right" %>
+</div>
+
+<div class="container-content">
+  <% @tratamientos.each_with_index do |tratamiento, index| %>
+  <div class="content-content">
+    <p class="numero"><%= index + 1 %></p>
+    <%= render tratamiento %>
+    <p>
+      <%= link_to "Ver tratamiento", tratamiento,class: "link-show" %>
+    </p>
+  </div>
+  <% end %>
+</div>
+

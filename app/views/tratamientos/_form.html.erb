@@ -1,0 +1,52 @@
+<%= form_with(model: tratamiento, class: "form-container") do |form| %>
+  <% if tratamiento.errors.any? %>
+    <div class="error-form">
+      <h2><%= pluralize(tratamiento.errors.count, "error") %> prohibited this tratamiento from being saved:</h2>
+
+      <ul>
+        <% tratamiento.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nombre, class: "label-form" %>
+    <%= form.text_field :nombre, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.label :descripcion, class: "label-form" %>
+    <%= form.text_area :descripcion, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.label :duracion, class: "label-form" %>
+    <%= form.text_field :duracion, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.label :diagnostico_id, class: "label-form" %>
+    <%= form.text_field :diagnostico_id, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.label :medico_id, class: "label-form" %>
+    <%= form.text_field :medico_id, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.label :estado, class: "label-form" %>
+    <%= form.text_field :estado, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.label :frecuencia_administracion, class: "label-form" %>
+    <%= form.text_field :frecuencia_administracion , class: "input-form"%>
+  </div>
+
+  <div>
+    <%= form.submit "Guardar" ,class: "submit-form"%>
+  </div>
+<% end %>

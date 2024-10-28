@@ -1,0 +1,44 @@
+<!-- app/views/pages/home.html.erb -->
+<h1 class="title-home">Sistema de Gestion SANAR ✚</h1>
+
+<ul class="menu-home">
+  <li class="menu-item-home">
+    <%= link_to pacientes_path, class: "link-home" do %>
+      <img src="/images/pacientes.png" alt="Pacientes" class="icon-home" />
+      <span class="title-link-home">Pacientes</span>
+    <% end %>
+  </li>
+  <li class="menu-item-home">
+    <%= link_to medicos_path, class: "link-home" do %>
+      <img src="/images/medicos.png" alt="Médicos" class="icon-home" />
+      <span class="title-link-home">Médicos</span>
+    <% end %>
+  </li>
+  <li class="menu-item-home">
+    <%= link_to cita_path, class: "link-home" do %>
+      <img src="/images/citas.png" alt="Citas" class="icon-home" />
+      <span class="title-link-home">Citas</span>
+    <% end %>
+  </li>
+  <li class="menu-item-home">
+    <%= link_to diagnosticos_path, class: "link-home" do %>
+      <img src="/images/diagnosticos.png" alt="Diagnósticos" class="icon-home" />
+      <span class="title-link-home">Diagnósticos</span>
+    <% end %>
+  </li>
+  <li class="menu-item-home">
+    <%= link_to tratamientos_path, class: "link-home" do %>
+      <img src="/images/tratamientos.png" alt="Tratamientos" class="icon-home" />
+      <span class="title-link-home">Tratamientos</span>
+    <% end %>
+  </li>
+  <li class="menu-item-home">
+    <%= link_to medicamentos_path, class: "link-home" do %>
+      <img src="/images/medicamentos.png" alt="Medicamentos" class="icon-home" />
+      <span class="title-link-home">Medicamentos</span>
+    <% end %>
+  </li>
+</ul>
+
+<!-- Botón de cerrar sesión -->
+<%= button_to "Cerrar sesión", logout_path, method: :delete, class: "logout-button-home", data: { confirm: "¿Estás seguro de que deseas cerrar sesión?" } %>

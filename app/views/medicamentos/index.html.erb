@@ -1,0 +1,22 @@
+<p><%= notice %></p>
+
+<% content_for :title, "Medicamentos" %>
+
+<h1>Medicamentos</h1>
+
+<div class="opcion-edit">
+  <%= link_to "❮ Volver", root_path, class: "link-new" %>
+  <%= link_to "✚ Nuevo medicamento", new_medicamento_path, class: "link-new right" %>
+
+</div>
+
+<div class="container-content">
+  <% @medicamentos.each do |medicamento| %>
+    <div class="content-content">
+    <%= render medicamento %>
+    <p>
+      <%= link_to "Ver medicamento", medicamento,class: "link-show" %>
+    </p>
+    </div>
+  <% end %>
+</div>

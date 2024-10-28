@@ -1,0 +1,13 @@
+<% content_for :title, "Editar diagnóstico" %>
+
+<h1>Editar diagnóstico</h1>
+
+
+<div class="opcion-edit">
+  <%= link_to "❮ Volver", diagnosticos_path , class: "link-new"%>
+  <%= link_to "Ver diagnóstico", @diagnostico, class: "link-new right" %> 
+</div>
+
+<div class="container-content">
+<%= render "form", diagnostico: @diagnostico %>
+</div>

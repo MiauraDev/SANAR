@@ -1,0 +1,22 @@
+<p><%= notice %></p>
+
+<% content_for :title, "Cita" %>
+
+<h1>Cita</h1>
+
+<div class="opcion-edit">
+<%= link_to "❮ Volver",  root_path, class: "link-new" %>
+<%= link_to "✚ Nueva cita", new_citum_path , class: "link-new right"%>
+</div>
+
+<div class="container-content">
+  <% @cita.each_with_index do |citum, index| %>
+    <div class="content-content">
+      <p class="numero"><%= index + 1 %></p>
+    <%= render citum %>
+    <p>
+      <%= link_to "Ver cita", citum,class: "link-show" %>
+    </p>
+  </div>
+  <% end %>
+</div>

@@ -1,0 +1,52 @@
+<%= form_with(model: paciente, class: "form-container") do |form| %>
+  <% if paciente.errors.any? %>
+    <div class="error-form">
+      <h2><%= pluralize(paciente.errors.count, "error") %> prohibited this paciente from being saved:</h2>
+
+      <ul>
+        <% paciente.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nombre, class: "label-form" %>
+    <%= form.text_field :nombre, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.label :apellido, class: "label-form" %>
+    <%= form.text_field :apellido, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.label :fecha_nacimiento, class: "label-form" %>
+    <%= form.date_field :fecha_nacimiento, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.label :genero, class: "label-form" %>
+    <%= form.text_field :genero, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.label :telefono, class: "label-form" %>
+    <%= form.text_field :telefono, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.label :direccion, class: "label-form" %>
+    <%= form.text_field :direccion, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.label :tipo_sangre, class: "label-form" %>
+    <%= form.text_field :tipo_sangre, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.submit "Guardar" , class: "submit-form"  %>
+  </div>
+<% end %>

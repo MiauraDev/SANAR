@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  dosis: MyString
+  frecuencia: MyString
+  duracion: MyString
+  tratamiento: one
+  proveedor: MyString
+  efectos_secundarios: MyString
+
+two:
+  nombre: MyString
+  dosis: MyString
+  frecuencia: MyString
+  duracion: MyString
+  tratamiento: two
+  proveedor: MyString
+  efectos_secundarios: MyString

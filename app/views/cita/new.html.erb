@@ -1,0 +1,9 @@
+<% content_for :title, "Nueva cita" %>
+
+<h1>Nueva cita</h1>
+
+  <%= link_to "❮ Volver", cita_path, class: "link-new" %>
+
+<div class="container-content">
+<%= render "form", citum: @citum %>
+</div>

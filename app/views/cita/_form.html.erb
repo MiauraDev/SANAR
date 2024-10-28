@@ -1,0 +1,52 @@
+<%= form_with(model: citum, class: "form-container") do |form| %>
+  <% if citum.errors.any? %>
+    <div class="error-form">
+      <h2><%= pluralize(citum.errors.count, "error") %> prohibited this citum from being saved:</h2>
+
+      <ul>
+        <% citum.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :fecha, class: "label-form" %>
+    <%= form.datetime_field :fecha , class: "input-form"%>
+  </div>
+
+  <div>
+    <%= form.label :motivo, class: "label-form" %>
+    <%= form.text_field :motivo, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.label :paciente_id, class: "label-form" %>
+    <%= form.text_field :paciente_id, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.label :medico_id, class: "label-form" %>
+    <%= form.text_field :medico_id, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.label :estado, class: "label-form" %>
+    <%= form.text_field :estado, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.label :observaciones, class: "label-form" %>
+    <%= form.text_area :observaciones, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.label :sala, class: "label-form" %>
+    <%= form.text_field :sala , class: "input-form"%>
+  </div>
+
+  <div>
+    <%= form.submit "Guardar" , class: "submit-form"%>
+  </div>
+<% end %>

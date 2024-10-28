@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="show">
+<div class="opcion-show">
+<div>
+    <%= link_to "❮ Volver", cita_path, class: "link-new" %>
+    </div> 
+
+    <div class="opcion-show">
+  <%= link_to "Editar", edit_citum_path(@citum), class: "link-edit" %> 
+  <%= button_to "Eliminar", @citum, method: :delete, class: "button-destroy"  %>
+</div>
+</div>
+
+<div class="container-content">
+  <div class="content-content">
+<%= render @citum %>
+
+</div>
+</div>
+</div>

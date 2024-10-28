@@ -1,0 +1,52 @@
+<%= form_with(model: medicamento, class: "form-container") do |form| %>
+  <% if medicamento.errors.any? %>
+    <div class="error-form">
+      <h2><%= pluralize(medicamento.errors.count, "error") %> prohibited this medicamento from being saved:</h2>
+
+      <ul>
+        <% medicamento.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nombre, class: "label-form" %>
+    <%= form.text_field :nombre , class: "input-form"%>
+  </div>
+
+  <div>
+    <%= form.label :dosis, class: "label-form" %>
+    <%= form.text_field :dosis , class: "input-form"%>
+  </div>
+
+  <div>
+    <%= form.label :frecuencia, class: "label-form" %>
+    <%= form.text_field :frecuencia , class: "input-form"%>
+  </div>
+
+  <div>
+    <%= form.label :duracion,  class: "label-form" %>
+    <%= form.text_field :duracion , class: "input-form"%>
+  </div>
+
+  <div>
+    <%= form.label :tratamiento_id,  class: "label-form" %>
+    <%= form.text_field :tratamiento_id , class: "input-form"%>
+  </div>
+
+  <div>
+    <%= form.label :proveedor,  class: "label-form" %>
+    <%= form.text_field :proveedor , class: "input-form"%>
+  </div>
+
+  <div>
+    <%= form.label :efectos_secundarios,  class: "label-form" %>
+    <%= form.text_field :efectos_secundarios , class: "input-form"%>
+  </div>
+
+  <div>
+    <%= form.submit "Guardar" ,class: "submit-form"%>
+  </div>
+<% end %>
